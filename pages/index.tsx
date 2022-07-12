@@ -1,19 +1,17 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import {useQuery} from '@apollo/client';
 import productByIdQuery from "../queries/product";
 import Loader from "../components/Loader";
-import ProductOptions from '../components/ProductOptions';
+import Product from "../components/Product";
 
 const Home: NextPage = () => {
     const {loading, error, data} = useQuery(productByIdQuery);
 
     if (loading) return <Loader/>
     if (error) return <p>Error :( {error.message}</p>;
-    if (!data) return null;
-
-    const {title, image: {src, alt, width, height}, options, variants} = JSON.parse(data.productById.data);
+    console.log('JSON.parse(data.productById.data):', JSON.parse(data.productById.data) );
+    console.log('JSON.parse(data.productById.variantRewards):', JSON.parse(data.productById.variantRewards) );
 
     return (
         <div>
@@ -24,19 +22,7 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <div className="bg-orange-200 mb-14 rounded-b-xl py-7 px-4">
-                    <h1>{title}</h1>
-                </div>
-               <div className="px-28 pb-24 max-w-screen-md w-full m-auto">
-                   <Image
-                       src={src}
-                       alt={alt}
-                       width={width}
-                       height={height}
-                   />
-                   <ProductOptions options={options} variants={variants}/>
-                   <button className="text-xl bg-gradient-to-b from-amber-500 to-amber-600 text-center m-auto w-full rounded-md text-white mt-14 h-16">Add to My Store</button>
-               </div>
+                <Product productById={data.productById}/>
             </main>
 
             <footer>

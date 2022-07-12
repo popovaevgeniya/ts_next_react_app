@@ -1,10 +1,10 @@
-type ProductVariantType = {
+export type ProductVariantType = {
     id: number
     option1: string
     option2: string
 }
 
-type ProductOptionType = {
+export type ProductOptionType = {
     id: number
     name: string
     position: number
