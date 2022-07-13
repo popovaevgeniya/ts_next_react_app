@@ -40,7 +40,6 @@ const ProductContainer: FC<ProductContainerPropsType> = ({productById: {data, va
 
     useEffect(() => {
         findVariant()
-        console.log('!!:' );
     }, [option1, option2])
 
     const [addToCart] = useMutation(ADD_TO_CART_MUTATION)
