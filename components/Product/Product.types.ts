@@ -25,4 +25,11 @@ export type ProductContainerPropsType = {
 
 export type ProductComponentPropsType = {
     data: ParseDataType
+    currentVariant: ProductVariantType
+    currentReward: number
+    option1: string
+    option2: string
+    setOption1: (option1: string) => void
+    setOption2: (option2: string) => void
+    handleAddToCartClick: () => void
 }

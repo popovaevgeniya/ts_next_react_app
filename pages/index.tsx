@@ -1,17 +1,25 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import {useQuery} from '@apollo/client';
-import productByIdQuery from "../queries/product";
+import {gql, useQuery} from '@apollo/client';
 import Loader from "../components/Loader";
 import Product from "../components/Product";
 
+const PRODUCT_BY_ID_QUERY = gql`
+  query {
+    productById(productId: 53) {
+      id
+      name
+      data
+      variantRewards
+    }
+  }
+`
+
 const Home: NextPage = () => {
-    const {loading, error, data} = useQuery(productByIdQuery);
+    const {loading, error, data} = useQuery(PRODUCT_BY_ID_QUERY);
 
     if (loading) return <Loader/>
     if (error) return <p>Error :( {error.message}</p>;
-    console.log('JSON.parse(data.productById.data):', JSON.parse(data.productById.data) );
-    console.log('JSON.parse(data.productById.variantRewards):', JSON.parse(data.productById.variantRewards) );
 
     return (
         <div>
