@@ -1,23 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # About project
-    • Project based on Next.js
-    • The design implemented using Tailwind CSS classes
-    • Main colors used defined Tailwind config file
+• Project based on Next.js
+• The design implemented using Tailwind CSS classes
+• Main colors used defined Tailwind config file
     
 # Description of how the app works
 
 1. Product data fetched from GraphQL API at https://dev-creator-backoffice-api.shopcat.click/graphql used Apollo Client
-
-	{
-	  productById(productId: 53) {
-	    id
-	    name
-	    data
-	    variantRewards
-	  }
-	}
-
+```bash
+{
+  productById(productId: 53) {
+    id
+    name
+    data
+    variantRewards
+  }
+}
+```
 When a query is in progress, a spinner shown.
 
 2. All product data, serialized to JSON,  is stored in the data field. Available options are stored in the options field inside. Options are displayed to the user and clickable - one option from each group can be selected at a time.
