@@ -1,5 +1,5 @@
 # About project
-• Project based on Next.js. Stack ReactJS, Tailwind CSS, Typescript
+• Project based on Next.js. Stack: ReactJS, Tailwind CSS, Typescript
 
 • The design implemented using Tailwind CSS classes
 
