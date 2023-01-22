@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # About project
 • Project based on Next.js
+
 • The design implemented using Tailwind CSS classes
+
 • Main colors used defined Tailwind config file
     
 # Description of how the app works
