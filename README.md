@@ -8,6 +8,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Description of how the app works
 
 1. Product data fetched from GraphQL API at https://dev-creator-backoffice-api.shopcat.click/graphql used Apollo Client
+
 	{
 	  productById(productId: 53) {
 	    id
@@ -29,7 +30,7 @@ When a query is in progress, a spinner shown.
 
 		mutation {
 		  addToCart(variantId: "123")
-	}
+		  }
 
 
 ## Getting Started
