@@ -27,11 +27,11 @@ When a query is in progress, a spinner shown.
 6. When a user opens the page, options for the variant with the highest reward pre-selected.
 7. If the selected variant is unavailable, Add to my store button  disabled.
 8. When Add to my store button is clicked, a mutation sent to the API, with the ID of currently selected variant as a parameter.
-
-		mutation {
-		  addToCart(variantId: "123")
-		  }
-
+```bash
+mutation {
+  addToCart(variantId: "123")
+}
+```
 
 ## Getting Started
 
