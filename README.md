@@ -1,3 +1,5 @@
+You can view the site at the link https://popovaevgeniya.github.io/ts_next_react_app/
+
 # About project
 • Project based on Next.js. Stack: ReactJS, Tailwind CSS, Typescript
 
