@@ -1,7 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # About project
-• Project based on Next.js
+• Project based on Next.js. Stack ReactJS, Tailwind CSS, Typescript
 
 • The design implemented using Tailwind CSS classes
 
